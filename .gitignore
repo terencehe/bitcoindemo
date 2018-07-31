@@ -3,3 +3,7 @@
 /bitcoinTest/.settings/org.eclipse.jdt.core.prefs
 /bitcoinTest/.settings/org.eclipse.m2e.core.prefs
 /bitcoinTest/target/**
+/bitcoinTest/src/main/java/bitcoin/maventest/Application.java
+/bitcoinTest/src/main/java/bitcoin/maventest/MessagePrinter.java
+/bitcoinTest/src/main/java/bitcoin/maventest/MessageService.java
+/bitcoinTest/src/main/java/bitcoin/maventest/MessageServiceImpl.java

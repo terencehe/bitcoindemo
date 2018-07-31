@@ -1,4 +1,4 @@
-package bitcoin;
+package bitcoin.util;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

@@ -5,13 +5,17 @@ package bitcoin.mine;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.stereotype.Component;
+
 import com.alibaba.fastjson.JSON;
 
 import bitcoin.domainobject.Block;
 import bitcoin.domainobject.Transaction;
 import bitcoin.util.SHA256Util;
 
-public class MineBTC {
+
+@Component
+public class POWMineServiceImpl implements MineService{
 	/**
 
 	 * 挖矿
@@ -25,8 +29,8 @@ public class MineBTC {
 	 * @return
 
 	 */
-
-	public static void mineBlock(List<Block> blockchain, List txs, String address) {
+    @Override
+	public void mineBlock(List<Block> blockchain, List<Transaction> txs, String address) {
 
 	    //加入系统奖励的交易
 
