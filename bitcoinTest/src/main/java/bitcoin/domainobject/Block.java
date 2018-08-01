@@ -111,6 +111,11 @@ public class Block {
 			this.previousHash = previousHash;
 		}
 
-       
+		@Override
+		public String toString() {
+			return "Block [index=" + index + ", hash=" + hash + ", timestamp=" + timestamp + ", transactions="
+					+ transactions + ", nounce=" + nounce + ", previousHash=" + previousHash + "]";
+		}
 
+       
 }

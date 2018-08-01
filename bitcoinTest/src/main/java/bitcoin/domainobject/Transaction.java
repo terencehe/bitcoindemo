@@ -74,7 +74,11 @@ public class Transaction {
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
+
+	@Override
+	public String toString() {
+		return "Transaction [id=" + id + ", sender=" + sender + ", recipient=" + recipient + ", amount=" + amount + "]";
+	}
     
-    	
-    
+    	    
 }
