@@ -13,8 +13,9 @@ import com.alibaba.fastjson.JSON;
 
 import bitcoin.domainobject.Block;
 import bitcoin.domainobject.Transaction;
-
 import bitcoin.mine.MineAdapter;
+import bitcoin.testhelper.BlockInitionInfo;
+import bitcoin.util.Constant;
 
 @Configuration
 @ComponentScan
@@ -29,7 +30,7 @@ public class MineStarter {
 		
 		
 		List<Block> blockchain = new ArrayList<Block>();
-		blockchain.add(initCreationBlock());
+		blockchain.add(BlockInitionInfo.initCreationBlock());
 		
 		List<Transaction> txs = new ArrayList<Transaction>();
 		
@@ -42,13 +43,5 @@ public class MineStarter {
 	}
 
 	
-	public static Block initCreationBlock(){
-		List<Transaction> transactions = new ArrayList<Transaction>();
-		Block creationBlock = new Block(0, System.currentTimeMillis(),transactions,
-		0,null, "aaaa"	);
-		
-		
-		return creationBlock;
-		
-	}
+
 }

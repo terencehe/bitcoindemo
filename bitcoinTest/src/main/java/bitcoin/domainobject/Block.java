@@ -34,7 +34,7 @@ public class Block {
 
         */
 
-        private List transactions;
+        private List<Transaction> transactions;
 
         /**
 
@@ -91,7 +91,7 @@ public class Block {
 			return transactions;
 		}
 
-		public void setTransactions(List transactions) {
+		public void setTransactions(List<Transaction> transactions) {
 			this.transactions = transactions;
 		}
 

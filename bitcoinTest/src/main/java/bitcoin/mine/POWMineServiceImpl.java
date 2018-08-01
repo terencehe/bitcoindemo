@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import com.alibaba.fastjson.JSON;
 
 import bitcoin.domainobject.Block;
+import bitcoin.domainobject.MerkleTree;
 import bitcoin.domainobject.Transaction;
 import bitcoin.util.SHA256Util;
 
@@ -47,10 +48,13 @@ public class POWMineServiceImpl implements MineService{
 	    int nonce = 1;
 
 	    String hash = "";
+	    
+	    MerkleTree merkleTree = new MerkleTree(txs);
+	    String txsMerkleTreeHash = merkleTree.getRoot();
 
 	    while(true){
 
-	        hash = SHA256Util.getSHA256StrJava(latestBlock.getHash() + JSON.toJSONString(txs) + nonce);
+	        hash = SHA256Util.getSHA256StrJava(latestBlock.getHash() + txsMerkleTreeHash + nonce);
 
 	        if (hash.startsWith("0000")) {
 
@@ -62,7 +66,7 @@ public class POWMineServiceImpl implements MineService{
 
 	        nonce++;
 
-	        System.out.println("º∆À„¥ÌŒÛ£¨hash:" + hash);
+//	        System.out.println("º∆À„¥ÌŒÛ£¨hash:" + hash);
 
 	    }
 

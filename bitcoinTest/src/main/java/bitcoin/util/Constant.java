@@ -1,4 +1,4 @@
-package bitcoin;
+package bitcoin.util;
 
 public class Constant {
 	public static final String MINER_ADDRESS="I_AM_A_MINER";
