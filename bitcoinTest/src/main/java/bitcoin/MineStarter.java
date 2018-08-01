@@ -13,7 +13,7 @@ import com.alibaba.fastjson.JSON;
 
 import bitcoin.domainobject.Block;
 import bitcoin.domainobject.Transaction;
-import bitcoin.maventest.Application;
+
 import bitcoin.mine.MineAdapter;
 
 @Configuration
